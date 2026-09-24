@@ -1,0 +1,104 @@
+* {box-sizing: border-box;}
+
+    body {
+        margin: 0;
+        padding: 40px 20px; 
+        font-family: 'Poppins', sans-serif;
+        background-color: #f4f7f4;
+        color: #3f4642;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 55px;
+        color: #365b4a;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #365b4a;
+    }
+
+    p {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    form {
+        width: 550px;
+        margin: auto; 
+        padding: 35px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    label {
+        display: block; 
+        margin-bottom: 8px;
+        color: #365b4a;
+    }
+
+    input {
+        width: 100%; 
+        padding: 12px;
+        margin-bottom: 10px; 
+        border: 1px solid #cbd8d0;
+        border-radius: 6px;
+    }
+
+    input[type="submit"] {
+        background-color: #557a65;
+        color: white;
+        font-size: 15px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #3f604e;
+    }
+
+/* Responsif design */
+@media (max-width: 768px) {
+    body {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    form {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+
+/* Untuk layar hp */
+@media (max-width: 480px) {
+    body {
+        padding: 25px 10px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    form {
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    input {
+        padding: 10px;
+    }
+}
