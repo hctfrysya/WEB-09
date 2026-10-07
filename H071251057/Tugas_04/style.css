@@ -1,0 +1,258 @@
+/* pengaturan awal */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #f5efeb;
+    min-height: 100vh;
+    color: black;
+    padding: 32px 16px;
+}
+
+.wadah {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+header h1 {
+    font-size: 2rem;
+    background: #112250;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+header p {
+  margin-top: 6px;
+}
+
+.asisten {
+    display : inline-block;
+    margin-top: 12px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: #e6f0ff;
+    border: 1px solid #b9d3ff;
+    font-size: 0.9rem;
+}
+
+/* rangkuman informasi */
+.ringkasan {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.stat {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #e5e7f0;
+    border-radius: 14px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(148, 163, 184, 0.12);
+}
+
+.stat span {
+    display: block;
+    font-size: 0.8rem;
+    color: black;
+    margin-bottom: 4px;
+}
+
+/* mngtur jmlh grid scr otomatis sesuai lebar lyr */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* bg tampilan informasi */
+.kartu {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    border-top: 5px solid;
+    box-shadow: 0 8px 20px rgba(148, 163, 184, 0.18); 
+    transition: transform 0.2s; 
+}
+
+/* geser atas  */
+.kartu:hover {
+    transform: translateY(-6px);
+}
+
+.kartu.lulus {
+    border-color: rgb(78, 167, 102);
+}
+
+.kartu.gagal {
+    border-color: #d3717c;
+}
+
+/* penempatan nama */
+.kartu-atas {
+    display: flex;
+    text-align: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+/* nama */
+.kartu-atas h3 {
+    font-size: 1.2rem;
+    color: #475569;
+}
+
+.kartu-atas small {
+    color: #94a3b8;
+}
+
+.avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a9c7f5, #cbb9ef);
+    display: flex;
+    /* ab */
+    align-items: center;
+    /* kika */
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* predikat */
+.predikat {
+    margin-left: auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #f5f0ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #b49de8;
+}
+
+/* nilai */
+.chips {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.chip {
+    background: #b3b8c0;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+}
+
+/* progress bar */
+.bar {
+    height: 8px;
+    background: #edf0f5;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.isi {
+    height: 100%;
+    background: rgb(186, 149, 186);
+    border-radius: 999px;
+}
+
+.kartu-bawah {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+    display: block;
+    font-size: 0.75rem;
+}
+
+.kartu-bawah strong {
+    font-size: 1.5rem;
+}
+
+/* status kelulusan */
+.status {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status.lulus {
+  background: #e4f5e8;
+  color: #6fa97a;
+}
+
+.status.gagal {
+  background: #fde9eb;
+  color: #d98b94;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 32px;
+}
+
+/* halaman akses ditolak */
+body.akses-ditolak {
+font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #f8f5ff, #eef7ff 60%, #fff1f7);
+  min-height: 100vh;
+  color: #475569;
+  padding: 32px 16px;
+}
+
+.box {
+  max-width: 500px;
+  margin: 100px auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 18px;
+  border-top: 5px solid #e8a3ad;
+  box-shadow: 0 8px 20px rgba(148, 163, 184, 0.18);
+  text-align: center;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 24px 12px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ringkasan {
+    grid-template-columns: 1fr 1fr;
+  }
+}
