@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen">
+
+    <div class="max-w-5xl mx-auto p-4 md:p-8">
+        <h1 class="text-2xl font-bold mb-6">
+            Siapa mengerjakan apa
+        </h1>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <section class="md:col-span-1">
+                <h2 class="text-lg font-semibold mb-3">
+                    Anggota tim
+                </h2>
+
+                <p id="members-loading" class="text-slate-500 hidden">
+                    Memuat anggota . . .
+                </p>
+
+                <p id="members-error" class="text-red-700 bg-red-50 border border-red-200 rounded p-3 hidden"></p>
+
+                <!-- dftr aggt dibuat js stlh mngmbil data dri API -->
+                <div id="members" class="flex flex-col gap-2"></div>
+            </section>
+
+            <section class="md:col-span-2">
+                <h2 id="tasks-title" class="text-lg font-semibold mb-3">
+                    Tugas
+                </h2>
+
+                <p id="tasks-placeholder" class="text-slate-500">
+                    Pilih seorang anggota untuk melihat tugasnya.
+                </p>
+
+                <p id="tasks-loading" class="text-slate-500 hidden">
+                    Memuat tugas . . .
+                </p>
+
+                <p id="tasks-error" class="text-red-700 bg-red-50 border border-red-200 rounded p-3 hidden"></p>
+
+                <div id="tasks-panel" class="hidden">
+                    <p id="summary" class="font-medium text-teal-800 mb-3"></p>
+
+                    <input id="search" type="text" placeholder="Cari tugas berdasarkan judul"
+                    class="w-full border border-slate-300 rounded px-3 py-2 mb-3 bg-white focus:outline-none focus:ring-2 focus:ring-teal-600">
+
+                    <ul id="task-list" class="flex flex-col gap-2"></ul>
+                    <p id="empty-message" class="text-slate-500 mt-2 hidden"></p>
+
+                    <!-- novalidate : nonaktif validasi otomatis js -->
+                    <form id="task-form" class="mt-6 bg-white border border-slate-200 rounded p-4" novalidate>
+                        <label for="task-title" class="block font-medium mb-2">
+                            Tambah tugas baru
+                        </label>
+
+                        <div class="flex gap-2">
+                            <input id="task-title" type="text" placeholder="Judul tugas (minimal 5 karakter)"
+                            class="flex-1 border border-slate-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-600">
+
+                            <button id="save-btn" type="submit"
+                            class="bg-teal-700 hover:bg-teal-800 disabled:opacity-60 text-white font-medium rounded px-4 py-2">Simpan</button>
+                        </div>
+
+                        <p id="form-error" class="text-red-700 mt-2 hidden"></p>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="notification" class="hidden fixed bottom-4 right-4 bg-teal-800 text-white rounded px-4 py-3 shadow-lg"></div>
+                
+    <script src="script.js"></script>
+</body>
+</html>
